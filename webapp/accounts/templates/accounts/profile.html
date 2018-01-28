@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+	{% block loggedIn %}
+		      <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-user"></span> Log out</a>
+	{% endblock %}
+
+	{% block head %}
+		<div class="container">
+			<h1> Profile </h1>
+		</div>
+	{% endblock %}
+
+	{% block container %}
+
+		<div class="container">
+			<p>
+				<p>Username:{{user}}</p>
+				<p>FirstName:{{ user.first_name }}</p>
+				<p>LastName:{{ user.last_name }}</p>
+				<p>Email:{{ user.email }}</p>
+				<p>Gender:{{ user.gender }}</p>
+			</p>
+		</div>
+
+	{% endblock %}
+
+
+
